@@ -1,0 +1,73 @@
+// LOCALHOST
+###
+GET http://localhost:3000/students
+
+###
+GET http://localhost:3000/students/67296f1b4ea7b766a3a3fdb2
+
+###
+GET http://localhost:3000/students/673222afcd9a4ccf67f24318
+###
+GET http://localhost:3000/students/673222f3cd9a4ccf67f3446c
+
+### Create contact 
+POST http://localhost:3000/students HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ashley", 
+    "lastName":"Weaver", 
+    "email":"aWeaver@test.com",
+    "number":19
+}
+
+###
+PUT http://localhost:3000/students/67322e4abc02c9ab21c8fcb5 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ashlee", 
+    "lastName":"Weaver", 
+    "email":"aWeaver@test.com",
+    "number":19
+}
+
+###
+DELETE http://localhost:3000/students/673230f03519bf981ba85cc7 HTTP/1.1
+
+// PRODUCTION Deploy
+###
+GET https://vangricky-api.onrender.com/contacts
+###
+GET https://vangricky-api.onrender.com/contacts/67296ee64ea7b766a3a3fdae
+###
+GET https://vangricky-api.onrender.com/contacts/67296f094ea7b766a3a3fdb0
+###
+GET https://vangricky-api.onrender.com/contacts/67296f1b4ea7b766a3a3fdb2
+
+### Create contact 
+POST http://vangricky-api.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ashley", 
+    "lastName":"Weaver", 
+    "email":"aWeaver@test.com", 
+    "favoriteColor":"Brown", 
+    "birthday":"06/19/2000"
+}
+
+###
+PUT http://vangricky-api.onrender.com/contacts/672ac353fab7c0573d79e54b HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Ashlee", 
+    "lastName":"Weaver", 
+    "email":"aWeaver@test.com", 
+    "favoriteColor":"Brown", 
+    "birthday":"06/19/2000"
+}
+
+###
+DELETE http://vangricky-api.onrender.com/contacts/672ac353fab7c0573d79e54b HTTP/1.1
